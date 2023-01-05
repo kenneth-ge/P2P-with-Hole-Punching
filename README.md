@@ -1,6 +1,6 @@
 # P2P-with-Hole-Punching
 ## Features
-* ✅ hole punching
+* ⌛ hole punching
 * ✅ basic text chatting
 * ✅ TTL for names in STUN server (i.e. removing names after they've disconnected from the STUN server)
 * ⌛ Host on an actual server
