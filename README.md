@@ -1,7 +1,7 @@
 # P2P-with-Hole-Punching
 ## Features
 * ✅ hole punching
-    * ⌛ works behind symmetric NATs [link to test](https://tomchen.github.io/symmetric-nat-test/)
+    * ⌛ works behind symmetric NATs ([link to test](https://tomchen.github.io/symmetric-nat-test/))
 * ✅ basic text chatting
 * ✅ TTL for names in STUN server (i.e. removing names after they've disconnected from the STUN server)
 * ⌛ Host on an actual server
