@@ -8,21 +8,7 @@ UDP_PORT = 5000
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-class MyThread(Thread):
-    def __init__(self, event):
-        Thread.__init__(self)
-        self.stopped = event
-
-    def run(self):
-        while not self.stopped.wait(0.5):
-            # call a function
-            sock.sendto(b"add Kenny\0", (UDP_IP, UDP_PORT))
-
-sock.sendto(b"add Kenny\0", (UDP_IP, UDP_PORT))
-
-stopFlag = Event()
-thread = MyThread(stopFlag)
-thread.start()
+sock.sendto(b"add Kenny2\0", (UDP_IP, UDP_PORT))
 
 chat_with = None
 
@@ -67,12 +53,11 @@ while True:
     person = int(input('enter the id number of the person, or -1 if you want to see if more devices are available'))
 
     if person == -1:
+        sock.sendto(b"add Kenny2\0", (UDP_IP, UDP_PORT))
         continue
     else:
         chat_with = people[person]
         break
-
-stopFlag.set()
 
 name, addr, port = chat_with
 addr = ('.'.join(str(c) for c in addr))
